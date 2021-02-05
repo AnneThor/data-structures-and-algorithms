@@ -91,13 +91,10 @@ const addValues = (arr, value) => {
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  let updArr = [];
-  arr.forEach( (arrayValue) => {
-    for (let i=0; i<times; i++) {
-      addValues(updArr, num);
+  for (let i=0; i<times; i++) {
+      addValues(arr, num);
     }
-  })
-  return updArr;
+  return arr
 }
 
 /* ------------------------------------------------------------------------------------------------
