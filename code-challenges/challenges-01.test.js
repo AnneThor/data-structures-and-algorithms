@@ -87,15 +87,17 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  return arr + value;
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  let updArr = [];
+  updArr;
   arr.forEach( (arrayValue) => {
-    updArray.push(addValues(arrayValue, number*times))
+    for (let i=0; i<times; i++) {
+      addValues(updArr, num);
     }
   )
+  return updArr;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -121,6 +123,7 @@ const createList = (availableItems) => {
   availableItems.forEach( item => {
     item.available ? shoppingList.push(item) : ""
   })
+  return shoppingList
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -150,6 +153,7 @@ const fizzbuzz = (arr) => {
       output.push(number)
     }
   })
+  console.log(output)
   return output
 };
 
