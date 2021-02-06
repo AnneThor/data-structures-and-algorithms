@@ -56,14 +56,18 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  let flatArray = []
-  const reducer = (num1, num2) => {
-    return num1 + num2
+  if (matrix.length === 0) {
+    return 0
+  } else {
+    let flatArray = []
+    const reducer = (num1, num2) => {
+      return num1 + num2
+    }
+    matrix.forEach((array) => {
+      flatArray.push(array.reduce(reducer))
+    })
+    return flatArray.reduce(reducer)
   }
-  matrix.forEach((array) => {
-    flatArray.push(array.reduce(reducer))
-  })
-  return flatArray.reduce(reducer)
 };
 
 
@@ -108,22 +112,27 @@ const grandTotal = (stores) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Pat has decided that he would also like to organize his data as objects containing the number of cookies sold per hour and the time.
+Pat has decided that he would also like to organize his data as objects containing the number of
+cookies sold per hour and the time.
 
 Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 
-Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
+Write a function named salesData that uses forEach to iterate over the hourlySales array and
+create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  let cookiesPerHour = []
-  for (let i=0; i<hours.length; i++) {
-    cookiesPerHour.push({
-      sales: data[1],
-      time: hours[i]
+  let totalCookieArray = grandTotal(data)
+  let objArray = []
+  let counter = 0;
+  totalCookieArray.forEach( hour => {
+    objArray.push({
+      sales: hour + " cookies",
+      time: hours[counter]
     })
-  }
-  return cookiesPerHour
+    counter++
+  })
+  return objArray
 };
 
 /* ------------------------------------------------------------------------------------------------
