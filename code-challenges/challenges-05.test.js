@@ -189,12 +189,15 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  arr.forEach((value) => {
-    let index = arr.indexOf(value)
-    if (value%2 === 0) {
-      arr.splice(index,1)
+  let length = arr.length
+  let offset = 0;
+  for (let i=0; i<length; i++) {
+    console.log(i+offset)
+    if (arr[i+offset]%2 === 0) {
+      arr.splice(i+offset, 1)
+      offset--
     }
-  })
+  }
 }
 
 /* ------------------------------------------------------------------------------------------------
