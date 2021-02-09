@@ -189,14 +189,12 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  //sort the array in place
-  arr.sort((a,b) => a%2-b%2)
-  //find index of first num where %2 !== 0
-  const even = (number) => {
-    return number %2 !== 0
-  }
-  let index = arr.findIndex(even)
-  return arr.slice(3)
+  arr.forEach((value) => {
+    let index = arr.indexOf(value)
+    if (value%2 === 0) {
+      arr.splice(index,1)
+    }
+  })
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -281,7 +279,7 @@ const extractVowels = (str) => {
       removedVowels += str.charAt(i)
     }
   }
-  removedVowels = removedVowels.split('').sort().join()
+  removedVowels = removedVowels.split('').sort().join('')
   return [outputStr, removedVowels]
 };
 
