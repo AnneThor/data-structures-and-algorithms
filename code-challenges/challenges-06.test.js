@@ -96,13 +96,10 @@ is in the object.
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  const keys = Object.keys(obj)
-  keys.forEach((key) => {
-    if (obj[key] === value) {
-      return true
-    }
-  })
+  const values = Object.values(obj)
+  return values.includes(value)
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
