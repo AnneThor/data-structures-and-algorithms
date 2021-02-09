@@ -138,7 +138,7 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  output = [];
+  let output = [];
   arr.forEach((number) => {
     if (number % 15 === 0) {
       output.push("Fizz Buzz")
