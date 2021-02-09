@@ -184,7 +184,7 @@ const hasChildrenEntries = (arr, character) => {
   let children = false
   arr.forEach((person) => {
     if (person['name'] === character) {
-      if (person['children'] !== []) {
+      if (person.children.length > 0) {
         children = true
       } else {
         children = false
@@ -202,16 +202,21 @@ in the array.
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  let characterArray = Object.values(arr[0])
-  let count = 0
+  let characterArray = [];
+  arr.forEach((person) => {
+    let people = Object.values(person)
+    characterArray = characterArray.concat(people.slice(0,-1))
+  })
+  let charCount = 0;
   characterArray.forEach((person) => {
-    if (typeof person !== 'string') {
-      count += person.length
-    } else {
-      count++
+    if (typeof person === 'string') {
+      charCount++
+    } else if (person !== null) {
+      charCount += person.length
     }
   })
-  return count
+  return charCount
+  console.log('character array: ', characterArray)
 };
 
 /* ------------------------------------------------------------------------------------------------
