@@ -244,7 +244,7 @@ const averageDailyTemperature = (weather) => {
   weather.forEach((week) => {
     flatArray.push(week.reduce(reducer))
   })
-  totalTemp = flatArray.reduce(reducer)
+  let totalTemp = flatArray.reduce(reducer)
   return parseFloat(totalTemp/totalDays)
 };
 
