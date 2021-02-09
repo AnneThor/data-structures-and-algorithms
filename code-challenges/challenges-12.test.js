@@ -122,10 +122,9 @@ create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  let totalCookieArray = grandTotal(data)
   let objArray = []
   let counter = 0;
-  totalCookieArray.forEach( hour => {
+  data.forEach( hour => {
     objArray.push({
       sales: hour + " cookies",
       time: hours[counter]
@@ -205,12 +204,14 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 
 const calculateProduct = (numbers) => {
   let flatArray = [];
-  const reducer = (value1, value2) => {
-    return value1*value2
+  const reducer = (val1, val2) => {
+    return val1 * val2
   }
   // use the reducer and then use it on each of the items
   numbers.forEach((array) => {
-    flatArray.push(array.reduce(reducer))
+    if (array.length > 0) {
+      flatArray.push(array.reduce(reducer))
+    }
   })
   return flatArray.reduce(reducer)
 };
@@ -244,7 +245,7 @@ const averageDailyTemperature = (weather) => {
     flatArray.push(week.reduce(reducer))
   })
   totalTemp = flatArray.reduce(reducer)
-  return totalTemp/totalDays
+  return parseFloat(totalTemp/totalDays)
 };
 
 /* ------------------------------------------------------------------------------------------------
