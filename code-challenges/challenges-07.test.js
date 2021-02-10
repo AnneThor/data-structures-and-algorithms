@@ -166,7 +166,7 @@ const snorlaxAbilities = {
 
 const extractAbilities = (arr) => {
   return arr.map((ability) => {
-    return ability.name
+    return ability.ability.name
   })
 };
 
