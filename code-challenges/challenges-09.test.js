@@ -36,7 +36,7 @@ Write a function named addValues that, given an array of numbers as input, uses 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
-  return arr.reduce((a,b) => a + b)
+  return arr.reduce((a,b) => return a + b)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,7 +53,7 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   const reducer = (a, b) => a + b
-  return arr.reduce((a,b) => a.purchasePrice + b.purchasePrice)
+  return arr.reduce((a,b) => return a.purchasePrice + b.purchasePrice)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,9 +125,9 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  let returnArr = []
-  arr.reduce((a,b) => returnArr.push(b.name))
-  return returnArr
+  return arr.reduce((acc, val) => {
+    return acc.concat(val.name)
+  }, [])
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -140,9 +140,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   let strArr = str.split('')
-  let revArr = strArr[0]
-  strArr.reduce((a,b) => revArr.unshift(b))
-  return revArr.join('')
+  let returnArr = strArr.reduce((acc, val) => {
+    acc.unshift(val)
+    return acc
+  }, [])
+  return returnArr.join('')
 };
 
 /* ------------------------------------------------------------------------------------------------
