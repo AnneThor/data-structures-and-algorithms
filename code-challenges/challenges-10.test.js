@@ -70,6 +70,7 @@ const totalSum = (input) => {
   }).reduce((acc, val) => {
     return acc + val
   })
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -161,10 +162,10 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   return data.filter((character) => {
-    return character.gender === 'female'
-  }).concat(data.filter((character) => {
-    return character.gender === 'male'
-  })).reduce((acc, character) => {
+    if (character.gender === 'female' ||
+      character.gender === 'male') {
+    return character}
+  }).reduce((acc, character) => {
     return acc.concat(character.name)
   }, []).join(' and ')
 };
@@ -183,7 +184,7 @@ let findShortest = (data) => {
     } else {
       return acc
     }
-  })
+  }).name
 };
 
 
