@@ -2,7 +2,7 @@
   "name": "data-structures-and-algorithms",
   "jest": {
     "verbose": true
-    }
+  },
   "version": "1.0.0",
   "description": "Data Structures, Algorithms, Code Challenges",
   "main": "index.js",
