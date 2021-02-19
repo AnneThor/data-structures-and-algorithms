@@ -1,5 +1,9 @@
 {
   "name": "data-structures-and-algorithms",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/annethor/data-structures-and-algorithms.git"
+  },
   "jest": {
     "verbose": true
   },
