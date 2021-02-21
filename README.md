@@ -1,15 +1,17 @@
-# Data Structures and Algorithms
+# 401 Data Structures, Code Challenges
 
-See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
+**[Challenge 1: Array Reverse](#reverse-an-array)**
 
-## Repository Quick Tour and Usage
 
-### 301 Code Challenges
+## Reverse an Array
 
-Under the `data-structures-and-algorithms` repository, at the top level is a folder called `code-challenges`
+### Challenge
+An algorithm that takes an array (of any type) as an input and returns the array in place with a reversed order of objects
 
-Each day, you'll add one new file to this folder to do your work for the day's assigned code challenge
+### Approach & Efficiency
+I used a temporary value and a while conditional statement to swap the first and last values of the array using the first/last indices of the array as markers and incrementing/lessenin the values in each interation while the end value was greater than the start. This accounts for both odd and even numbered values of array lengths.
 
-### 401 Data Structures, Code Challenges
+BigO is n/2, the while loop will run a maximum of n/2 times as each iteration deals with 2 array values
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+### Solution
+![image of reverse array whiteboard](assets/array-reverse.jpeg)
