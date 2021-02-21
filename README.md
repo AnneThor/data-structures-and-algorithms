@@ -1,17 +1,18 @@
 # 401 Data Structures, Code Challenges
 
+## Table of Contents
 **[Challenge 1: Array Reverse](#reverse-an-array)**
 
 
-## Reverse an Array
+### Reverse an Array
 
-### Challenge
+#### Challenge
 An algorithm that takes an array (of any type) as an input and returns the array in place with a reversed order of objects
 
-### Approach & Efficiency
+#### Approach & Efficiency
 I used a temporary value and a while conditional statement to swap the first and last values of the array using the first/last indices of the array as markers and incrementing/lessenin the values in each interation while the end value was greater than the start. This accounts for both odd and even numbered values of array lengths.
 
 BigO is n/2, the while loop will run a maximum of n/2 times as each iteration deals with 2 array values
 
-### Solution
+#### Solution
 ![image of reverse array whiteboard](assets/array-reverse.jpeg)
