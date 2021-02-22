@@ -1,4 +1,4 @@
-module.exports = function reverseArray(array) {
+module.exports = (array) => {
   let start = 0;
   let end = array.length-1;
   while (end > start) {
