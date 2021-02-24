@@ -1,7 +1,7 @@
 'use strict'
 
 const supertest = require('supertest');
-const arrayReverse = require('../challenges/arrayReverse/array-reverse.js');
+const arrayReverse = require('../../challenges/arrayReverse/array-reverse.js');
 
 describe('array reverse', () => {
 

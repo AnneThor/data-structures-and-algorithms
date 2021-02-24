@@ -1,7 +1,7 @@
 'use strict'
 
 const supertest = require('supertest');
-const arrayShift = require('../challenges/arrayShift/array-shift.js');
+const arrayShift = require('../../challenges/arrayShift/array-shift.js');
 
 describe('array shift', () => {
 
@@ -21,5 +21,12 @@ describe('array shift', () => {
     expect(arrayShift([1],100)).toEqual([1,100])
   })
 
+  it('returns an error if the input array is invalid', () => {
+    expect(arrayShift(55, 55)).toEqual('Array input is invalid')
+  })
+
+  it('returns the input array with no changes if there is no value to add', () => {
+    expect(arrayShift([1,2,3])).toEqual([1,2,3])
+  })
 
 })

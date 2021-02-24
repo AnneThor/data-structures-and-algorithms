@@ -1,4 +1,10 @@
 module.exports = function insertShiftArray(arr, val) {
+  if(!Array.isArray(arr)) {
+    return 'Array input is invalid';
+  }
+  if(!val) {
+    return arr;
+  }
   if (!arr.length) {
     return arr;
   }
