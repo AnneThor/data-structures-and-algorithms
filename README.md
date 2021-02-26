@@ -5,3 +5,5 @@
 **[Challenge 1: Array Reverse](./challenges/arrayReverse/README.md)**
 
 **[Challenge 2: Shift Array](./challenges/arrayShift/README.md)**
+
+**[Challenge 3: Array Binary Search](./challenges/arrayBinarySearch/README.md)**
