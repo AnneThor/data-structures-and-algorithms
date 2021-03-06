@@ -7,3 +7,5 @@
 **[Challenge 2: Shift Array](./challenges/arrayShift/README.md)**
 
 **[Challenge 3: Array Binary Search](./challenges/arrayBinarySearch/README.md)**
+
+**[Challenge 4: Linked Lists](./challenges/linkedList/README.md)**
