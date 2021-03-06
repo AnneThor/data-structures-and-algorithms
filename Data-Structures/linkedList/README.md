@@ -16,4 +16,4 @@ Method | Description | Time Complexity | Space Complexity
 
 
 ## API
-[JS Docs Webpage](https://annethor.github.io/data-structures-and-algorithms/out/linked-list.js.html)
+[JS Docs Webpage](../../out/linked-list.js.html)
