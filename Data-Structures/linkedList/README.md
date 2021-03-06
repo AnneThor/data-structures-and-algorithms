@@ -6,7 +6,7 @@ Created LinkedList and Node classes, add functionality as outlined above to the 
 
 ## Approach & Efficiency
 
-###Linked List Object Methods
+### Linked List Object Methods
 | Method | Description | Time Complexity | Space Complexity
 ------ | ----------- | --------------- | ----------------
 | ```insert``` | adds a node to the head of the linked list | O(1) | O(1)
@@ -16,4 +16,4 @@ Created LinkedList and Node classes, add functionality as outlined above to the 
 
 
 ## API
-[JS Docs Webpage](out/linked-list.js.html)
+[JS Docs Webpage](../../out/linked-list.js.html)
