@@ -17,4 +17,4 @@ Created LinkedList and Node classes, add functionality as outlined above to the 
 ## API
 [JS Docs Webpage](../../out/.linked-list.js.html)
 
-[Live Version](https://annethor.github.io/data-structures-and-algorithms/Data-Structures/linkedList/)
+[Live Version](https://annethor.github.io/data-structures-and-algorithms/Data-Structures/out/linked-list.js.html)
