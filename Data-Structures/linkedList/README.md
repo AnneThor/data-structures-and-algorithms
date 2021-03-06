@@ -15,6 +15,6 @@ Created LinkedList and Node classes, add functionality as outlined above to the 
 | ```toString``` | returns string representation of linked list | O(n) | O(1)
 
 ## API
-[JS Docs Webpage](../../out/.linked-list.js.html)
+[JS Docs Webpage](../../out/linked-list.js.html)
 
 [Live Version](https://annethor.github.io/data-structures-and-algorithms/Data-Structures/out/linked-list.js.html)
