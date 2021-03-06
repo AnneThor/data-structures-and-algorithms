@@ -16,4 +16,4 @@ Created LinkedList and Node classes, add functionality as outlined above to the 
 
 
 ## API
-[JS Docs Webpage](../../out/linked-list.js.html)
+[JS Docs Webpage](./../../out/linked-list.js.html)
