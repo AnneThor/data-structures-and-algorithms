@@ -6,7 +6,6 @@ Created LinkedList and Node classes, add functionality as outlined above to the 
 
 ## Approach & Efficiency
 
-<<<<<<< HEAD
 ###Linked List Object Methods
 | Method | Description | Time Complexity | Space Complexity
 ------ | ----------- | --------------- | ----------------
