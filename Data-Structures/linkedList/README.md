@@ -1,13 +1,19 @@
-# Challenge Summary
-Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+# Singly Linked List
+Implementation of a singly linked list. A linked list object will instantiate a new linked list with an empty (null) head. Nodes can be instantiated and added to the linkedlist object using the available object methods, currently ```insert```: add to head, ```append```: add to tail, ```includes``` returns boolean representing if input value is present in linked list, ```toString```: returns string representation of linked List
 
-## Challenge Description
-Use binary search without utilizing built in array methods to return the index of a given value provided a sorted array and a value to search for. In this challenge I am assuming that a receive legitimate input: an in order, least to greatest sorted array of numbers and a number value to search for.
+## Challenge
+Created LinkedList and Node classes, add functionality as outlined above to the LinkedList class
 
 ## Approach & Efficiency
-Implemented using a while loop that bisects the array on each iteration and compares the target value to the mid value of the bisected array; ultimately the loop will terminate when the bisected array reaches a length of 1 or the value is matched.
 
-The array is halved each time the loop iterates, so the worst case scenario is O(log n).
+###Linked List Object Methods
+| Method | Description | Time Complexity | Space Complexity
+------ | ----------- | --------------- | ----------------
+| ```insert``` | adds a node to the head of the linked list | O(1) | O(1)
+| ```append``` | adds a node to the tail (end) of linked list) |  O(n) | O(1)
+| ```includes``` | returns boolean representing if param value is found in linked list | O(n) | O(1) ? I think, it's not creating anything new, just returning a boolean
+| ```toString``` | returns string representation of linked list | O(n) | O(1)
 
-## Solution
-![whiteboard solution for array binary search](../../assets/array-binary-search.png)
+
+## API
+[JS Docs Webpage](out/linked-list.js.html)
