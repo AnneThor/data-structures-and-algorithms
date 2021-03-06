@@ -20,6 +20,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "eslint": "^7.2.0",
+    "jsdoc": "^3.6.6",
     "mustache": "^4.0.1"
   },
   "optionalDependencies": {
