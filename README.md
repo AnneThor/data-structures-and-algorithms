@@ -8,4 +8,4 @@
 
 **[Challenge 3: Array Binary Search](./challenges/arrayBinarySearch/README.md)**
 
-**[Challenge 4: Linked Lists](./challenges/linkedList/README.md)**
+**[Challenge 4: Linked Lists](./Data-Structures/linkedList/README.md)**
