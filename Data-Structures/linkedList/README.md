@@ -15,4 +15,4 @@ Created LinkedList and Node classes, add functionality as outlined above to the 
 | ```toString``` | returns string representation of linked list | O(n) | O(1)
 
 ## API
-[JS Docs Webpage](../../out/index.html)
+[JS Docs Webpage](../../out/.linked-list.js.html)
