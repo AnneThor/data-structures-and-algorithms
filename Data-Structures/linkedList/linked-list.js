@@ -97,7 +97,7 @@ class LinkedList {
   * If the search value is not contained in the linked list, returns -1
   * @param {*} value - value to search for in the array (any type)
   * @param {*} newValue - value to add to new node
-  * @returns {-1} - if the search value is not found in the array
+  * @returns {Number} - -1 if the search value is not found in the array
   */
   insertAfter(value, newValue) {
     let current = this.head;
@@ -122,7 +122,7 @@ class LinkedList {
   * If the search value is not contained in the linked list, returns -1
   * @param {*} value - value to search for in the array (any type)
   * @param {*} newValue - value to add to new node
-  * @returns {-1} - if the search value is not found in the array
+  * @returns {Number} - -1 if the search value is not found in the array
   */
   insertBefore(value, newValue) {
     if(this.head.value === value) {
