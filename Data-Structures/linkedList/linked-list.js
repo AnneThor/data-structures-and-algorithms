@@ -9,16 +9,6 @@ class LinkedList {
 
 
   /**
-  * Takes in any value as an argument and adds a new node as the head
-  * @param {*} value - accepts any value to store in the node
-  */
-  insert(value) {
-    let current = this.head;
-    this.head = new Node(value);
-    this.head.next = current;
-  }
-
-  /**
   * Takes in any values as an argument and adds a new node as the tail
   * @param {*} value - any value is acceptable as input
   */
@@ -34,6 +24,41 @@ class LinkedList {
       current.next = new Node(value);
     }
   }
+
+  /**
+  * Takes in any value returns the node holding the input value
+  * @param {*} value - takes in any type of value to search for and delete
+  * @returns {Number} - -1 if value is not found in the list
+  */
+  delete(value) {
+    if(this.head === null) {
+      return -1;
+    }
+    let current = this.head;
+    if (current.value === value) {
+      this.head = current.next;
+      current.next = null;
+    } else if (current.next === null) {
+      return -1
+    } else {
+      while (current.next.next !== null && current.next.value !== value) {
+        current = current.next;
+      }
+      //now either current.next.next === null & you need to test curr.next
+      //or current.next.value = value to remove
+      if (current.next.next === null) {
+        if (current.next.value === value) {
+          current.next = null;
+        } else {
+          return -1;
+        }
+      } else {
+        //current.next.value = value
+        current.next = current.next.next;
+      }
+    }
+  }
+
 
   /**
   * Takes in any value and returns a Boolean representing if the linked list
@@ -53,6 +78,68 @@ class LinkedList {
       current = current.next;
     }
     return false;
+  }
+
+  /**
+  * Takes in any value as an argument and adds a new node as the head
+  * @param {*} value - accepts any value to store in the node
+  */
+  insert(value) {
+    let current = this.head;
+    this.head = new Node(value);
+    this.head.next = current;
+  }
+
+  /**
+  * Accepts a value to search for and a newValue to add
+  * Creates a node with the new value and inserts it into the list after the
+  * node containing the search value (if found)
+  * If the search value is not contained in the linked list, returns -1
+  * @param {*} value - value to search for in the array (any type)
+  * @param {*} newValue - value to add to new node
+  * @returns {-1} - if the search value is not found in the array
+  */
+  insertAfter(value, newValue) {
+    let current = this.head;
+    while (current.next !== null && current.value !== value) {
+      current = current.next;
+    }
+    if (current.next === null && current.value !== value) {
+      return -1;
+    } else if (current.next === null && current.value === value) {
+      return this.append(newValue);
+    } else {
+      let newNode = new Node(newValue);
+      newNode.next = current.next;
+      current.next = newNode;
+    }
+  }
+
+  /**
+  * Accepts a value to search for and a newValue to add
+  * Creates a node with the new value and inserts it into the list before the
+  * node containing the search value (if found)
+  * If the search value is not contained in the linked list, returns -1
+  * @param {*} value - value to search for in the array (any type)
+  * @param {*} newValue - value to add to new node
+  * @returns {-1} - if the search value is not found in the array
+  */
+  insertBefore(value, newValue) {
+    if(this.head.value === value) {
+      return this.insert(newValue);
+    }
+    let current = this.head;
+    while (current.next.next !== null && current.next.value !== value) {
+      current = current.next;
+    }
+    if (current.next.next === null & current.next !== value) {
+      return -1;
+    } else {
+      //current.next = value
+      let newNode = new Node(newValue);
+      newNode.next = current.next;
+      current.next = newNode;
+    }
   }
 
   /**
