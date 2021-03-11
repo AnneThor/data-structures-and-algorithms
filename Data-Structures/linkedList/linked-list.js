@@ -5,6 +5,7 @@ const Node = require('./node.js');
 class LinkedList {
   constructor() {
     this.head = null;
+    this.length = 0;
   }
 
 
@@ -15,6 +16,7 @@ class LinkedList {
   append(value) {
     if (!this.head) {
       this.head = new Node(value);
+      this.length++;
     } else {
       let current = this.head;
       //traverse to the last node
@@ -22,6 +24,7 @@ class LinkedList {
         current = current.next;
       }
       current.next = new Node(value);
+      this.length++;
     }
   }
 
@@ -38,6 +41,7 @@ class LinkedList {
     if (current.value === value) {
       this.head = current.next;
       current.next = null;
+      this.length--;
     } else if (current.next === null) {
       return -1
     } else {
@@ -49,12 +53,14 @@ class LinkedList {
       if (current.next.next === null) {
         if (current.next.value === value) {
           current.next = null;
+          this.length--;
         } else {
           return -1;
         }
       } else {
         //current.next.value = value
         current.next = current.next.next;
+        this.length--;
       }
     }
   }
@@ -88,6 +94,7 @@ class LinkedList {
     let current = this.head;
     this.head = new Node(value);
     this.head.next = current;
+    this.length++;
   }
 
   /**
@@ -112,6 +119,7 @@ class LinkedList {
       let newNode = new Node(newValue);
       newNode.next = current.next;
       current.next = newNode;
+      this.length++;
     }
   }
 
@@ -139,7 +147,50 @@ class LinkedList {
       let newNode = new Node(newValue);
       newNode.next = current.next;
       current.next = newNode;
+      this.length++;
     }
+  }
+
+  /**
+  * Takes an integer input k and returns the value of the node in the kth position
+  * from the end of the linked list
+  * @param {Number} - integer representing the nth place from end to return the value of
+  * @returns {*} - the contents of the node at the kth position from the end or `Exception` if not found
+  */
+  kthFromEnd(k) {
+    if (k >= this.length || k < 0) {
+      throw "Exception, input out of bound";
+    }
+    if (this.length === 1) {
+      if (k > 0) {
+        throw "Exception, input out of bound";
+      } else {
+        return this.head.value;
+      }
+    }
+    let endpoint = this.length - k;
+    let current = this.head;
+    for (let i=1; i<endpoint; i++) {
+      current = current.next;
+    }
+    return current.value;
+  }
+
+  /**
+  * Returns the value of the middle node in a linked list
+  * For odd numbered lists this will be at the length/2 numbered node
+  * @returns {*} - the contents of the node at the middle position
+  */
+  middleValue(){
+    if (this.head === null) {
+      throw "Exception, empty head";
+    }
+    let middle = Math.ceil(this.length/2);
+    let current = this.head;
+    for (let i=1; i<middle; i++) {
+      current = current.next;
+    }
+    return current.value;
   }
 
   /**
