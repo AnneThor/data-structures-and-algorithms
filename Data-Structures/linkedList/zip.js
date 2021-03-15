@@ -6,9 +6,9 @@ const linkedList = require('./linked-list.js');
 * Accepts as inputs two linked lists and returns one linked list composed of alternating
 * nodes from the input linked lists
 * "{ llOneNode1 } -> { llTwoNode1 } -> { llOneNode2 } -> { llTwoNode2} --> ...."
-* @params {Object} listOne - a linked list object
-* @params {Object} listTwo - a linked list object
-* @returns {Object} - a single linked list object
+* @param {Object} listOne - a linked list object
+* @param {Object} listTwo - a linked list object
+* @return {Object} - a single linked list object
 */
 const zip = (listOne, listTwo) => {
   // Edge cases: 1 or 2 empty list inputs
