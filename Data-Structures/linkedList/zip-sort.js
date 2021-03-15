@@ -6,9 +6,9 @@ const linkedList = require('./linked-list.js');
 * Accepts as inputs two sorted linked lists (integer values, least to greatest)
 * and returns one linked list composed of the nodes in order
 * "{ llOneNode1 } -> { llTwoNode1 } -> { llOneNode2 } -> { llTwoNode2} --> ...."
-* @params {Object} listOne - a linked list object containing ascending sorted number values
-* @params {Object} listTwo - a linked list object containing ascending sorted number values
-* @returns {Object} - a single linked list object with sorted
+* @param {Object} listOne - a linked list object containing ascending sorted number values
+* @param {Object} listTwo - a linked list object containing ascending sorted number values
+* @return {Object} - a single linked list object with sorted
 */
 
 const zipSort = (listOne, listTwo) => {

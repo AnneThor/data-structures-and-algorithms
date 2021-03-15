@@ -21,5 +21,7 @@ External functions accepting linked lists as inputs have been added:
 
 ## API / Whiteboard
 [JS Docs Zip](https://annethor.github.io/data-structures-and-algorithms/out/zip.js.html)
+
 [JS Docs Zip-Sort](https://annethor.github.io/data-structures-and-algorithms/out/zip-sort.js.html)
-![image of linked list whiteboard](../../assets/linked-list-zip.jpg)
+
+![image of linked list whiteboard](../../assets/linked-list-zip.png)
