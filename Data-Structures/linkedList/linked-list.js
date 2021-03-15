@@ -154,7 +154,7 @@ class LinkedList {
   /**
   * Takes an integer input k and returns the value of the node in the kth position
   * from the end of the linked list
-  * @param {Number} - integer representing the nth place from end to return the value of
+  * @param {Number} k - integer representing the nth place from end to return the value of
   * @returns {*} - the contents of the node at the kth position from the end or `Exception` if not found
   */
   kthFromEnd(k) {
@@ -215,5 +215,7 @@ class LinkedList {
   }
 
 }
+
+
 
 module.exports = LinkedList;
