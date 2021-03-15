@@ -33,5 +33,4 @@ Linked list traversal methods (including all that are methods of this Linked Lis
 
 ## API / Whiteboard
 [JS Docs](https://annethor.github.io/data-structures-and-algorithms/out/linked-list.js.html)
-![image of linked list whiteboard](../../assets/linked-list-kth-from-end
-  .jpg)
+![image of linked list whiteboard](../../assets/linked-list-kth-from-end.jpg)
