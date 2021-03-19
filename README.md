@@ -13,3 +13,5 @@
 **[Challenge 7: Linked Lists Extended](./Data-Structures/linkedList/README-kth.md)**
 
 **[Challenge 8: Linked List External Methods](./Data-Structures/linkedList/README-zip.md)**
+
+**[Challenge 9: Stacks and Queues](./Data-Structures/stacks-and-queues/README.md)**
