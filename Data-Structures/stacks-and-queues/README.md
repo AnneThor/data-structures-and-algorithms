@@ -31,6 +31,6 @@ Summary above and JS Docs links below
 
 [JS Docs - Stack](https://annethor.github.io/data-structures-and-algorithms/out/stack.js.html)
 
-[JS Docs - Stack](https://annethor.github.io/data-structures-and-algorithms/out/queue.js.html)
+[JS Docs - Queue](https://annethor.github.io/data-structures-and-algorithms/out/queue.js.html)
 
 ![image of linked list whiteboard](../../assets/stack-queue.jpg)
