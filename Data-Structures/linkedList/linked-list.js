@@ -194,6 +194,15 @@ class LinkedList {
   }
 
   /**
+   * Reverses a linked list and returns a reference to the new list head
+   * list updated in reverse order
+   */
+   reverse() {
+     // try a recursive call 
+   };
+
+
+  /**
   * Returns all the values in the linked list as a string represented in the format
   * "{ a } -> { b } -> { c } -> NULL"
   * @returns {String} - string representing the data held in each node in the format
