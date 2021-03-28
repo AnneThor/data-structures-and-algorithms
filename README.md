@@ -2,18 +2,24 @@
 
 ## Table of Contents
 
-**[Challenge 11: A Queue from Stacks](./challenges/queueWithStacks/README.md)**
+### Data Structures
 
-**[Challenge 9: Stacks and Queues](./Data-Structures/stacks-and-queues/README.md)**
+**[Stacks and Queues](./Data-Structures/stacks-and-queues/README.md)**
 
-**[Challenge 8: Linked List External Methods](./Data-Structures/linkedList/README-zip.md)**
+**[Linked List External Methods](./Data-Structures/linkedList/README-zip.md)**
 
-**[Challenge 7: Linked Lists Extended](./Data-Structures/linkedList/README-kth.md)**
+**[Linked Lists Extended](./Data-Structures/linkedList/README-kth.md)**
 
-**[Challenge 5-6: Linked Lists](./Data-Structures/linkedList/README.md)**
+**[Linked Lists](./Data-Structures/linkedList/README.md)**
 
-**[Challenge 3: Array Binary Search](./challenges/arrayBinarySearch/README.md)**
+**[Array Binary Search](./challenges/arrayBinarySearch/README.md)**
 
-**[Challenge 2: Shift Array](./challenges/arrayShift/README.md)**
+**[Shift Array](./challenges/arrayShift/README.md)**
 
-**[Challenge 1: Array Reverse](./challenges/arrayReverse/README.md)**
+**[Array Reverse](./challenges/arrayReverse/README.md)**
+
+### Code Challenges
+
+**[FIFO Animal Shelter](./challenges/fifoAnimalShelter/README.md)**
+
+**[A Queue from Stacks](./challenges/queueWithStacks/README.md)**
