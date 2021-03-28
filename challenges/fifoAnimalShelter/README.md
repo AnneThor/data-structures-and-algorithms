@@ -4,7 +4,7 @@
 
 Implement an AnimalShelter Class that uses first in, first out approach, and accepts only Animal objects of type 'cat' or 'dog'
 
-### Stack Methods
+### FIFO ANIMAL SHELTER METHODS
 
 Method | Space Complexity | Time Complexity
 ------ | ---------------- | ---------------
