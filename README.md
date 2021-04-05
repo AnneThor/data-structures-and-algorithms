@@ -20,6 +20,8 @@
 
 ### Code Challenges
 
+**[Multi Bracket Validation](./challenges/multiBracketValidation/README.md)**
+
 **[FIFO Animal Shelter](./challenges/fifoAnimalShelter/README.md)**
 
 **[A Queue from Stacks](./challenges/queueWithStacks/README.md)**
