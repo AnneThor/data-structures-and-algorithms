@@ -51,7 +51,7 @@ class Stack {
      * @returns {boolean} representing if stack is empty
      */
      isEmpty() {
-       return this.top ? true : false;
+       return this.top === null ? true : false;
      }
 
 }
