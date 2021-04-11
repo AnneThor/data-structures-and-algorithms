@@ -4,6 +4,8 @@
 
 ### Data Structures
 
+**[Binary Tree and Binary Search Tree](./Data-Structures/tree/README.md)**
+
 **[Stacks and Queues](./Data-Structures/stacks-and-queues/README.md)**
 
 **[Linked List External Methods](./Data-Structures/linkedList/README-zip.md)**
