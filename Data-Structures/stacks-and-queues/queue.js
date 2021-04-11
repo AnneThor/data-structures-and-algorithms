@@ -21,7 +21,7 @@ class Queue {
      if (!this.front) {
        this.front = newNode;
        this.rear = newNode;
-       this.front.next = this.rear;
+       // this.front.next = this.rear;
        return;
      }
      this.rear.next = newNode;
@@ -37,12 +37,15 @@ class Queue {
     if (!this.front) {
       throw new Error('Cannot dequeue an empty queue');
     }
+    if (this.front.next === null) {
+      let tempNode = this.front;
+      this.front = null;
+      this.rear = null;
+      return tempNode.value;
+    }
     let tempNode = this.front;
     this.front = this.front.next;
     tempNode.next = null;
-    if (this.front === this.rear) {
-      this.rear = null;
-    }
     return tempNode.value;
   }
 
@@ -64,7 +67,7 @@ class Queue {
     * @returns {boolean} - representing if queue is empty
     */
     isEmpty() {
-      return this.front ? true : false;
+      return this.front === null ? true : false;
     }
 
 }

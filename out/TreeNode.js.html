@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: TreeNode.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,37 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: TreeNode.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * The Tree Node class consists of nodes that contain a value and a left and right reference; all values are instantiated to null
+ */
 
+class TreeNode {
 
-    <h3> </h3>
+  /**
+   * The constructor method creates a new TreeNode containing the input value and null left/right references
+   * @param {*} value - the value to contain in the new TreeNode
+   */
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
 
+}
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+module.exports = TreeNode;
+</code></pre>
+        </article>
+    </section>
 
 
 
