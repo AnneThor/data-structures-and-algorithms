@@ -52,8 +52,11 @@ describe("QUEUE data structure functionality", () => {
   })
 
   test('that we can successfully dequeue the expected value', () => {
+    console.log("before", testQ);
     expect(testQ.dequeue()).toEqual(1);
+    console.log("after 1 dq", testQ);
     expect(testQ.dequeue()).toEqual(2);
+    console.log("after 2 dq", testQ);
     expect(() => {
         testQ.dequeue()
       }).toThrow();
