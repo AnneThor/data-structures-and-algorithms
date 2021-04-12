@@ -12,6 +12,8 @@ Big O(time) = O(n) it traverses every node in the tree because values are stored
 
 Big O(space) = O(h) the maximum number of calls on the stack at any given time is equal to the height of the tree
 
+[JS Docs - Binary Tree](https://annethor.github.io/data-structures-and-algorithms/out/BinaryTree.js.html)
+
 ## WHITEBOARD
 
-![Whiteboard for Binary Tree Max](../../assets/binary-tree-max)
+![Whiteboard for Binary Tree Max](../../assets/binary-tree-max.png)
