@@ -22,6 +22,8 @@
 
 ### Code Challenges
 
+**[Binary Tree Max](./Data-Structures/tree/README2.md)**
+
 **[Multi Bracket Validation](./challenges/multiBracketValidation/README.md)**
 
 **[FIFO Animal Shelter](./challenges/fifoAnimalShelter/README.md)**
