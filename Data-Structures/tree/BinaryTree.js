@@ -231,6 +231,33 @@ class BinaryTree {
   }
 
   /**
+   * Method that finds and returns the greatest value held in the tree
+   * or null if the tree is empty
+   * @return {*} - the numerical greatest value in the tree or null if it is
+   * empty
+   */
+   findMax() {
+      if (this.root === null) { return null; }
+      // return max of left, right and root
+      const _helper = (node) => {
+        if (node === null) { return }
+        let maxVal = node.value;
+        let leftMax = _helper(node.left);
+        let rightMax = _helper(node.right);
+        if (leftMax > maxVal) {
+          maxVal = leftMax;
+        }
+        if (rightMax > maxVal) {
+          maxVal = rightMax;
+        }
+        return maxVal;
+      }
+      return _helper(this.root);
+   }
+
+
+
+  /**
    * Method that returns the tree values in a string in order
    * @return {string} - a string listing tree contents in order
    */
