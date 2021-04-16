@@ -60,6 +60,32 @@ class BinaryTree {
   }
 
   /**
+   * Method that does a breath first traversal of the tree using a queue
+   * to return an array holding the tree contents in depth first order
+   * @return {object} - an array representation of the tree contents in breadth
+   * first order
+   */
+  breadthFirst() {
+    let arr = [];
+    if (this.root === null) { return arr }
+    let q = new Queue();
+    q.enqueue(this.root);
+    let temp;
+    while (!q.isEmpty()) {
+      temp = q.dequeue();
+      arr.push(temp.value);
+      if (temp.left) {
+        q.enqueue(temp.left);
+      }
+      if (temp.right) {
+        q.enqueue(temp.right);
+      }
+    }
+    return arr;
+  }
+
+
+  /**
    * Method that does a breath first search of the tree using a queue
    * to return a boolean representing whether or not the value was
    * found in the tree
@@ -67,7 +93,7 @@ class BinaryTree {
    * @return {boolean} - representing if the value was found in the tree
    */
   contains(value) {
-    if (this.root === null) { return false; }
+    if (this.root === null) { return false }
     let q = new Queue();
     q.enqueue(this.root);
     let temp;
