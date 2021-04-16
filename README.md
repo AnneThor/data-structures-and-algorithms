@@ -22,6 +22,8 @@
 
 ### Code Challenges
 
+**[Binary Tree Breadth First Search](./Data-Structures/tree/README3.md)**
+
 **[Binary Tree Max](./Data-Structures/tree/README2.md)**
 
 **[Multi Bracket Validation](./challenges/multiBracketValidation/README.md)**
