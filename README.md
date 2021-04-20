@@ -22,7 +22,7 @@
 
 ### Code Challenges
 
-**[Fizz Buzz Clone of K-ary Tree]('./challenges/fizzBuzzTree/README.md')**
+**[Fizz Buzz Clone of K-ary Tree](./challenges/fizzBuzzTree/README.md)**
 
 **[Binary Tree Breadth First Search](./Data-Structures/tree/README3.md)**
 
