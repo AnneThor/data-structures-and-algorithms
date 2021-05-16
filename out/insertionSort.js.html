@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: insertionSort.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,41 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: insertionSort.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict'
 
+/**
+ * The insertionSort function accepts an array of numbers as an input 
+ * and modifies the array in place to arrange the values in ascending
+ * order
+ * @param {object} arr - an array of numbers
+ **/
+const insertionSort = (arr) => {
 
-    <h3> </h3>
+  for (let i=1; i&lt;arr.length; i++) {
+    let j = i-1;
+    let temp = arr[i];
 
+    while (j >= 0 &amp;&amp; temp &lt; arr[j]) {
+      arr[j+1] = arr[j];
+      j--;
+    }
+    arr[j+1]=temp;
+  }
+}
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+module.exports = insertionSort;
+</code></pre>
+        </article>
+    </section>
 
 
 
