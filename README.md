@@ -20,6 +20,10 @@
 
 **[Array Reverse](./challenges/arrayReverse/README.md)**
 
+### Sorting Approaches 
+
+**[Insertion Sort](./challengers/insertionSort/README.md)**
+
 ### Code Challenges
 
 **[Fizz Buzz Clone of K-ary Tree](./challenges/fizzBuzzTree/README.md)**
