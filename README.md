@@ -22,7 +22,7 @@
 
 ### Sorting Approaches 
 
-**[Insertion Sort](./challengers/insertionSort/README.md)**
+**[Insertion Sort](./challenges/insertionSort/README.md)**
 
 ### Code Challenges
 
