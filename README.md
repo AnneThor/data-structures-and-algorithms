@@ -20,7 +20,9 @@
 
 **[Array Reverse](./challenges/arrayReverse/README.md)**
 
-### Sorting Approaches 
+### Sorting Approaches
+
+**[Merge Sort](./challenges/mergeSort/BLOG.md)**
 
 **[Insertion Sort](./challenges/insertionSort/README.md)**
 
