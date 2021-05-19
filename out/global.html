@@ -104,7 +104,7 @@
     
 
     
-    <h4 class="name" id="insertionSort"><span class="type-signature"></span>insertionSort<span class="signature">(arr)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="merge"><span class="type-signature"></span>merge<span class="signature">(arr, l, m, r)</span><span class="type-signature"></span></h4>
     
 
     
@@ -112,9 +112,9 @@
 
 
 <div class="description">
-    The insertionSort function accepts an array of numbers as an input 
-and modifies the array in place to arrange the values in ascending
-order
+    merge function merges the subarrays back into one greater array
+in proper ascending order; there is no return, the array is manipulated in
+place
 </div>
 
 
@@ -166,7 +166,76 @@ order
 
             
 
-            <td class="description last">an array of numbers</td>
+            <td class="description last">array of numerical values</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>l</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">left index</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>m</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">middle index</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>r</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">right index</td>
         </tr>
 
     
@@ -207,7 +276,191 @@ order
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="insertionSort.js.html">insertionSort.js</a>, <a href="insertionSort.js.html#line9">line 9</a>
+        <a href="mergeSort.js.html">mergeSort.js</a>, <a href="mergeSort.js.html#line29">line 29</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="mergeSort"><span class="type-signature"></span>mergeSort<span class="signature">(arr, l, r)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    mergeSort accepts an array of numbers, the lowest index and the
+highest index and sorts the array in ascending value in place
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">an array of numerical values</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>l</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the lowest index in the array</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>r</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the highest index of the array</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mergeSort.js.html">mergeSort.js</a>, <a href="mergeSort.js.html#line11">line 11</a>
     </li></ul></dd>
     
 
@@ -253,13 +506,13 @@ order
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#insertionSort">insertionSort</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#merge">merge</a></li><li><a href="global.html#mergeSort">mergeSort</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sat May 15 2021 22:49:46 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Mon May 17 2021 22:09:57 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

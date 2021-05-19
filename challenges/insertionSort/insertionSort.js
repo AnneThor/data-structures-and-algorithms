@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * The insertionSort function accepts an array of numbers as an input 
+ * The insertionSort function accepts an array of numbers as an input
  * and modifies the array in place to arrange the values in ascending
  * order
  * @param {object} arr - an array of numbers
