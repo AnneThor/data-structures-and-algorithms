@@ -28,11 +28,7 @@ Below is a step by step walk through of the entire **Merge Sort** Process for th
 
 ### Detail of Merge Step
 
-<<<<<<< HEAD
-![Details of Merge 1](./mege-4.png)
-=======
 ![Details of Merge 1](./merge-4.png)
->>>>>>> c7dc10751487962c022f05563759faeb10b04bac
 
 ### Details of Final Merge Step
 
