@@ -4,11 +4,7 @@
  * mergeSort accepts an array of numbers, the lowest index and the
  * highest index and sorts the array in ascending value in place
  * @param {object} arr - an array of numerical values
-<<<<<<< HEAD
  * @param {number} l - the lowest index in the array
-=======
- * @param {number} l - the lowest index in the array 
->>>>>>> c7dc10751487962c022f05563759faeb10b04bac
  * @param {number} r - the highest index of the array
  **/
 
