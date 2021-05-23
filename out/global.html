@@ -104,7 +104,7 @@
     
 
     
-    <h4 class="name" id="merge"><span class="type-signature"></span>merge<span class="signature">(arr, l, m, r)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="partition"><span class="type-signature"></span>partition<span class="signature">(arr, low, high)</span><span class="type-signature"></span></h4>
     
 
     
@@ -112,9 +112,10 @@
 
 
 <div class="description">
-    merge function merges the subarrays back into one greater array
-in proper ascending order; there is no return, the array is manipulated in
-place
+    Partition is a helper function to quick sort. This function takes
+as inputs the array and the low/high index of the portion to be
+sorted. It modifies the array in place and returns the updated
+pivot to pass to L/R sides to finish the sorting
 </div>
 
 
@@ -166,14 +167,14 @@ place
 
             
 
-            <td class="description last">array of numerical values</td>
+            <td class="description last">array of numerical values to sort</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>l</code></td>
+                <td class="name"><code>low</code></td>
             
 
             <td class="type">
@@ -189,14 +190,14 @@ place
 
             
 
-            <td class="description last">left index</td>
+            <td class="description last">integer value of low index to sort</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>m</code></td>
+                <td class="name"><code>high</code></td>
             
 
             <td class="type">
@@ -212,30 +213,7 @@ place
 
             
 
-            <td class="description last">middle index</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>r</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">right index</td>
+            <td class="description last">integer value of high index to sort</td>
         </tr>
 
     
@@ -276,7 +254,7 @@ place
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mergeSort.js.html">mergeSort.js</a>, <a href="mergeSort.js.html#line29">line 29</a>
+        <a href="quickSort.js.html">quickSort.js</a>, <a href="quickSort.js.html#line33">line 33</a>
     </li></ul></dd>
     
 
@@ -312,7 +290,7 @@ place
     
 
     
-    <h4 class="name" id="mergeSort"><span class="type-signature"></span>mergeSort<span class="signature">(arr, l, r)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="quickSort"><span class="type-signature"></span>quickSort<span class="signature">(arr)</span><span class="type-signature"> &rarr; {object}</span></h4>
     
 
     
@@ -320,8 +298,9 @@ place
 
 
 <div class="description">
-    mergeSort accepts an array of numbers, the lowest index and the
-highest index and sorts the array in ascending value in place
+    Quick Sort is a divide and conquer algorithm that accepts
+an array of numerical values (must be all numerical values)
+and returns the array sorted in ascending order
 </div>
 
 
@@ -377,16 +356,153 @@ highest index and sorts the array in ascending value in place
         </tr>
 
     
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="quickSort.js.html">quickSort.js</a>, <a href="quickSort.js.html#line11">line 11</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    arr - the same array sorted in asccending order
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="swap"><span class="type-signature"></span>swap<span class="signature">(arr, i, j)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Swap function takes in an array and two integer values and returns
+the array with the value at [i] and [j] swapped
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
 
         <tr>
             
-                <td class="name"><code>l</code></td>
+                <td class="name"><code>arr</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">object</span>
 
 
             
@@ -396,14 +512,14 @@ highest index and sorts the array in ascending value in place
 
             
 
-            <td class="description last">the lowest index in the array</td>
+            <td class="description last">the array to swap values in</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>r</code></td>
+                <td class="name"><code>i</code></td>
             
 
             <td class="type">
@@ -419,7 +535,30 @@ highest index and sorts the array in ascending value in place
 
             
 
-            <td class="description last">the highest index of the array</td>
+            <td class="description last">integer value of first index to swap</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>j</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">integer value of second index to swap</td>
         </tr>
 
     
@@ -460,7 +599,7 @@ highest index and sorts the array in ascending value in place
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mergeSort.js.html">mergeSort.js</a>, <a href="mergeSort.js.html#line11">line 11</a>
+        <a href="quickSort.js.html">quickSort.js</a>, <a href="quickSort.js.html#line61">line 61</a>
     </li></ul></dd>
     
 
@@ -506,13 +645,13 @@ highest index and sorts the array in ascending value in place
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#merge">merge</a></li><li><a href="global.html#mergeSort">mergeSort</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#partition">partition</a></li><li><a href="global.html#quickSort">quickSort</a></li><li><a href="global.html#swap">swap</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Mon May 17 2021 22:09:57 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun May 23 2021 12:20:43 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

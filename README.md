@@ -22,6 +22,8 @@
 
 ### Sorting Approaches
 
+**[QuickSort](./challenges/quickSort/BLOG.md)**
+
 **[Merge Sort](./challenges/mergeSort/BLOG.md)**
 
 **[Insertion Sort](./challenges/insertionSort/README.md)**
