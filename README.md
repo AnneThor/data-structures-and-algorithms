@@ -4,6 +4,8 @@
 
 ### Data Structures
 
+**[Hash Table](./Data-Structures/hashTable/README.md)**
+
 **[Binary Tree and Binary Search Tree](./Data-Structures/tree/README.md)**
 
 **[Stacks and Queues](./Data-Structures/stacks-and-queues/README.md)**

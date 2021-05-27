@@ -198,7 +198,7 @@ class LinkedList {
    * list updated in reverse order
    */
    reverse() {
-     // try a recursive call 
+     // try a recursive call
    };
 
 
