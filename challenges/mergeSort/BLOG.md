@@ -12,7 +12,7 @@ The space complexity of this algorithm (sorting in place) is O(n) because you ha
 
 ## Code
 
-[JsDoc for Insertion Sort Implementation]((https://annethor.github.io/data-structures-and-algorithms/out/mergeSort.js.html))
+[JsDoc for Insertion Sort Implementation](https://annethor.github.io/data-structures-and-algorithms/out/mergeSort.js.html)
 
 ## Step by Step Example of Merge Sort
 
