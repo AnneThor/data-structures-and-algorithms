@@ -21,7 +21,7 @@ The first pass of Quicksort compares every value, therefore has a runtime O(n). 
 
 ## Code
 
-[JsDoc for QuickSort Implementation]((https://annethor.github.io/data-structures-and-algorithms/out/quickSort.js.html))
+[JsDoc for QuickSort Implementation](https://annethor.github.io/data-structures-and-algorithms/out/quickSort.js.html)
 
 ## Step by Step Example of Quick Sort
 
