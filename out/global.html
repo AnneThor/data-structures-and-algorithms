@@ -104,7 +104,7 @@
     
 
     
-    <h4 class="name" id="partition"><span class="type-signature"></span>partition<span class="signature">(arr, low, high)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="repeatedWords"><span class="type-signature"></span>repeatedWords<span class="signature">(string)</span><span class="type-signature"> &rarr; {string}</span></h4>
     
 
     
@@ -112,10 +112,8 @@
 
 
 <div class="description">
-    Partition is a helper function to quick sort. This function takes
-as inputs the array and the low/high index of the portion to be
-sorted. It modifies the array in place and returns the updated
-pivot to pass to L/R sides to finish the sorting
+    Repeated words accepts a string and returns
+the first word that is repeated in the string
 </div>
 
 
@@ -151,13 +149,13 @@ pivot to pass to L/R sides to finish the sorting
 
         <tr>
             
-                <td class="name"><code>arr</code></td>
+                <td class="name"><code>string</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">object</span>
+<span class="param-type">string</span>
 
 
             
@@ -167,53 +165,8 @@ pivot to pass to L/R sides to finish the sorting
 
             
 
-            <td class="description last">array of numerical values to sort</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>low</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">integer value of low index to sort</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>high</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">integer value of high index to sort</td>
+            <td class="description last">the text that we are
+analyzing</td>
         </tr>
 
     
@@ -254,146 +207,7 @@ pivot to pass to L/R sides to finish the sorting
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="quickSort.js.html">quickSort.js</a>, <a href="quickSort.js.html#line33">line 33</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="quickSort"><span class="type-signature"></span>quickSort<span class="signature">(arr)</span><span class="type-signature"> &rarr; {object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Quick Sort is a divide and conquer algorithm that accepts
-an array of numerical values (must be all numerical values)
-and returns the array sorted in ascending order
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>arr</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">an array of numerical values</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="quickSort.js.html">quickSort.js</a>, <a href="quickSort.js.html#line11">line 11</a>
+        <a href="repeatedWords.js.html">repeatedWords.js</a>, <a href="repeatedWords.js.html#line14">line 14</a>
     </li></ul></dd>
     
 
@@ -422,7 +236,9 @@ and returns the array sorted in ascending order
 
         
 <div class="param-desc">
-    arr - the same array sorted in asccending order
+    - "No doubles" if no words
+were repeated or the string representation
+of the first word found twice
 </div>
 
 
@@ -433,7 +249,7 @@ and returns the array sorted in ascending order
     </dt>
     <dd>
         
-<span class="param-type">object</span>
+<span class="param-type">string</span>
 
 
     </dd>
@@ -451,7 +267,7 @@ and returns the array sorted in ascending order
     
 
     
-    <h4 class="name" id="swap"><span class="type-signature"></span>swap<span class="signature">(arr, i, j)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="stringToArray"><span class="type-signature"></span>stringToArray<span class="signature">(string)</span><span class="type-signature"> &rarr; {object}</span></h4>
     
 
     
@@ -459,8 +275,10 @@ and returns the array sorted in ascending order
 
 
 <div class="description">
-    Swap function takes in an array and two integer values and returns
-the array with the value at [i] and [j] swapped
+    stringToArray is a helper function that
+accepts a strings as input and returns
+an array of the words in the string stripped
+of punctuation
 </div>
 
 
@@ -496,13 +314,13 @@ the array with the value at [i] and [j] swapped
 
         <tr>
             
-                <td class="name"><code>arr</code></td>
+                <td class="name"><code>string</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">object</span>
+<span class="param-type">string</span>
 
 
             
@@ -512,53 +330,8 @@ the array with the value at [i] and [j] swapped
 
             
 
-            <td class="description last">the array to swap values in</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>i</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">integer value of first index to swap</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>j</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">integer value of second index to swap</td>
+            <td class="description last">the string we are
+analyzing</td>
         </tr>
 
     
@@ -599,7 +372,7 @@ the array with the value at [i] and [j] swapped
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="quickSort.js.html">quickSort.js</a>, <a href="quickSort.js.html#line61">line 61</a>
+        <a href="repeatedWords.js.html">repeatedWords.js</a>, <a href="repeatedWords.js.html#line76">line 76</a>
     </li></ul></dd>
     
 
@@ -624,6 +397,197 @@ the array with the value at [i] and [j] swapped
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - an array containing just
+the lowercase words of the text with any
+whitespace/punctuation/non alphabetical
+characters removed
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="wordCount"><span class="type-signature"></span>wordCount<span class="signature">(string)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Word Count takes a string input and returns
+an object that holds key/value pairs that
+represent each unique word and the integer
+count of the number of times it appeared in
+the text
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>string</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the string we are
+analyzing</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="repeatedWords.js.html">repeatedWords.js</a>, <a href="repeatedWords.js.html#line41">line 41</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - object holding unique
+words as keys with an integer representing
+the number of occurrences
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
@@ -645,13 +609,13 @@ the array with the value at [i] and [j] swapped
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#partition">partition</a></li><li><a href="global.html#quickSort">quickSort</a></li><li><a href="global.html#swap">swap</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#repeatedWords">repeatedWords</a></li><li><a href="global.html#stringToArray">stringToArray</a></li><li><a href="global.html#wordCount">wordCount</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun May 23 2021 12:20:43 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sat May 29 2021 13:56:24 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
