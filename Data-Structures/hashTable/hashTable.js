@@ -46,6 +46,7 @@ class HashTable {
       if (this.contains(key)) {
         return "Value already in table"
       }
+      if (!value) { value = key }
       let unit = { [key]: value }
       let hash = this.hash(key);
       this.map[hash].append(unit);
@@ -62,16 +63,39 @@ class HashTable {
     get(key) {
       let hash = this.hash(key);
       let list = this.map[hash];
-      let curr = list.head;
       if (!list.head) { return null }
-      while (!curr.value.hasOwnProperty(key)) {
-        if (!curr.next) {
-          return null
+      let curr = list.head;
+      while (curr) {
+        if (curr.value.hasOwnProperty(key)) {
+          return curr.value[key]
         }
         curr = curr.next;
       }
-      return curr.value;
+      return null;
     }
+
+    /**
+     * The update function checks if a value is present in a hash
+     * table and, if it is, replaces it with the updated data
+     * @param {string} key - key of value to update
+     **/
+     update(key, value) {
+       let hash = this.hash(key)
+       if (!this.contains(key)) {
+         this.add(key);
+       } else {
+         // we need to update this value
+         let list = this.map[hash];
+         if (!list.head) { return null }
+         let curr = list.head
+         while (curr) {
+           if (curr.value.hasOwnProperty(key)) {
+             curr.value = { [key]: value }
+           }
+           curr = curr.next;
+         }
+       }
+     }
 
     /**
      * The contains function accepts a key (string) input and

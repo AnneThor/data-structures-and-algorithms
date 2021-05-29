@@ -32,6 +32,8 @@
 
 ### Code Challenges
 
+**[Repeated Words](./challenges/repeatedWords/README.md)**
+
 **[Fizz Buzz Clone of K-ary Tree](./challenges/fizzBuzzTree/README.md)**
 
 **[Binary Tree Breadth First Search](./Data-Structures/tree/README3.md)**
