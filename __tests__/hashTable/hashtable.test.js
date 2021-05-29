@@ -37,7 +37,7 @@ describe("HASH TABLE functionality", () => {
     newHT.add(key, value);
     expect(newHT.map[hash].head).toBeDefined();
     expect(newHT.map[hash].head.value).toEqual({ "Annie": "student" })
-    expect(newHT.get("Annie")).toEqual({ "Annie": "student" })
+    expect(newHT.get("Annie")).toEqual("student")
   })
 
   test("that you cannot add the same key twice", () => {
@@ -54,7 +54,7 @@ describe("HASH TABLE functionality", () => {
     let shortHash = new ht(1);
     shortHash.add("Annie", "student");
     shortHash.add("White Worm", "Cat");
-    expect(shortHash.get("White Worm")).toEqual({ "White Worm": "Cat" })
+    expect(shortHash.get("White Worm")).toEqual("Cat")
   })
 
 })
