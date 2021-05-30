@@ -16,3 +16,5 @@ This is also operating a O(n) because the function must add or update the map n 
 [JS Docs for Repeated Words/Word Count](https://annethor.github.io/data-structures-and-algorithms/out/repeatedWords.js.html)
 
 [JS Docs for Hash Table](https://annethor.github.io/data-structures-and-algorithms/out/hashTable.js.html)
+
+![Whiteboard for repeated words](./repeatedWords.png)
