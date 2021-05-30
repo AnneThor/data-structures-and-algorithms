@@ -32,6 +32,8 @@
 
 ### Code Challenges
 
+**[Tree Intersection](./challenges/treeIntersection/README.md)**
+
 **[Repeated Words](./challenges/repeatedWords/README.md)**
 
 **[Fizz Buzz Clone of K-ary Tree](./challenges/fizzBuzzTree/README.md)**
