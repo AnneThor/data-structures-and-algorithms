@@ -104,7 +104,7 @@
     
 
     
-    <h4 class="name" id="sameValues"><span class="type-signature"></span>sameValues<span class="signature">(node, map, values)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="leftJoin"><span class="type-signature"></span>leftJoin<span class="signature">(left, right)</span><span class="type-signature"> &rarr; {object}</span></h4>
     
 
     
@@ -112,8 +112,11 @@
 
 
 <div class="description">
-    Add values that are in both sets to an array
-of shared values, return the array
+    Left join accepts two hash tables as arguments
+and returns a left join (i.e. all values in the
+left table are returned with the values from
+the right table appended to the result row if they
+exist)
 </div>
 
 
@@ -149,7 +152,7 @@ of shared values, return the array
 
         <tr>
             
-                <td class="name"><code>node</code></td>
+                <td class="name"><code>left</code></td>
             
 
             <td class="type">
@@ -165,14 +168,16 @@ of shared values, return the array
 
             
 
-            <td class="description last">root of tree</td>
+            <td class="description last">a hashtable that has strings as keys
+and a synonym of the keys for values, so key -> value -->
+string: string</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>map</code></td>
+                <td class="name"><code>right</code></td>
             
 
             <td class="type">
@@ -188,31 +193,8 @@ of shared values, return the array
 
             
 
-            <td class="description last">hashtable to compare against</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>values</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">an empty array that values
-found in both trees are added to</td>
+            <td class="description last">a hashtable that has strings for keys and
+antonyms for values, so key:value -> string: string</td>
         </tr>
 
     
@@ -253,7 +235,7 @@ found in both trees are added to</td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="treeIntersection.js.html">treeIntersection.js</a>, <a href="treeIntersection.js.html#line37">line 37</a>
+        <a href="leftjoin.js.html">leftjoin.js</a>, <a href="leftjoin.js.html#line21">line 21</a>
     </li></ul></dd>
     
 
@@ -282,365 +264,10 @@ found in both trees are added to</td>
 
         
 <div class="param-desc">
-    the values array filled with all numbers found
-in both trees
-</div>
-
-
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="toMap"><span class="type-signature"></span>toMap<span class="signature">(node, map)</span><span class="type-signature"> &rarr; {object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    The to map functions traverses an input binary tree in order
-and adds the value to a map
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>node</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">head node of a binary tree object</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>map</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the map to add the values to</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="treeIntersection.js.html">treeIntersection.js</a>, <a href="treeIntersection.js.html#line56">line 56</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    - returns the map objects updated with the
-unique values found in the tree
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="treeIntersection"><span class="type-signature"></span>treeIntersection<span class="signature">(treeA, treeB)</span><span class="type-signature"> &rarr; {object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Tree Intersection accepts two binary trees as inputs
-and returns an array of values representing the set of
-numbers that are contained in both input trees
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>treeA</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the first binary tree</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>treeB</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the second binary tree</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="treeIntersection.js.html">treeIntersection.js</a>, <a href="treeIntersection.js.html#line15">line 15</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    - an array of the set of numbers that
-exist in both input trees
+    - an object that contains objects with
+they key values from the left join and the synonym (and
+antonym if applicable else null)
+i.e. { {key: string, syn: sting, ant: string}, { key: string...}}
 </div>
 
 
@@ -679,13 +306,13 @@ exist in both input trees
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#sameValues">sameValues</a></li><li><a href="global.html#toMap">toMap</a></li><li><a href="global.html#treeIntersection">treeIntersection</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#leftJoin">leftJoin</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun May 30 2021 13:19:59 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Mon Jun 07 2021 20:25:46 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
