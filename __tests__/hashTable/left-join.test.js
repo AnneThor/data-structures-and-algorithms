@@ -1,7 +1,7 @@
 'use strict';
 const ll = require('../../Data-Structures/linkedList/linked-list.js')
 const ht = require('../../Data-Structures/hashTable/hashTable.js')
-const { leftJoin } = require('../../challenges/leftJoin/leftJoin.js')
+const { leftJoin } = require('../../challenges/leftJoin/leftjoin.js')
 
 describe("HASH TABLE functionality", () => {
 
