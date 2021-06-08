@@ -1,31 +1,34 @@
 'use strict';
 const ll = require('../../Data-Structures/linkedList/linked-list.js')
 const ht = require('../../Data-Structures/hashTable/hashTable.js')
+const { leftJoin } = require('../../challenges/leftJoin/leftJoin.js')
 
 describe("HASH TABLE functionality", () => {
+
+  console.log("LEFT JOIN", leftJoin);
 
   let synonym, antonym, empty;
   let expectedOutput = [
     ["fond", "enamored", "averse"],
-    ["wrath", "anger", NULL],
-    ["deligent", "employed", "idle"],
-    ["outfit", "garb", NULL],
+    ["wrath", "anger", null],
+    ["diligent", "employed", "idle"],
+    ["outfit", "garb", null],
     ["guide", "usher", "follow"]
   ]
 
-  let expectedWithNull = [
-    ["fond", "enamored", NULL],
-    ["wrath", "anger", NULL],
-    ["deligent", "employed", NULL],
-    ["outfit", "garb", NULL],
-    ["guide", "usher", NULL]
+  let expectedWithnull = [
+    ["fond", "enamored", null],
+    ["wrath", "anger", null],
+    ["diligent", "employed", null],
+    ["outfit", "garb", null],
+    ["guide", "usher", null]
   ]
 
   let reverseResult = [
     ["fond", "averse", "enamored"],
-    ["deligent", "idle", "employed"],
+    ["diligent", "idle", "employed"],
     ["guide", "follow", "usher"],
-    ["flow", "jam", NULL]
+    ["flow", "jam", null]
   ]
 
   beforeEach(() => {
@@ -40,7 +43,7 @@ describe("HASH TABLE functionality", () => {
     antonym.add("fond", "averse")
     antonym.add("diligent", "idle")
     antonym.add("guide", "follow")
-    antonyn.add("flow", "jam")
+    antonym.add("flow", "jam")
 
     empty = new ht(9)
   })
@@ -51,9 +54,9 @@ describe("HASH TABLE functionality", () => {
   })
 
   test("that a left join returns the expected result", () => {
-    expect(synonym.leftJoin(antonym).toEqual(expectedOutput);
-    expect(antonym.leftJoin(synonym)).toEqual(reverseResult);
-    expect(synonym.leftJoin(empty)).toEqual(expectedWithNull);
+    expect(leftJoin(synonym, antonym)).toEqual(expectedOutput);
+    expect(leftJoin(antonym, synonym)).toEqual(reverseResult);
+    expect(leftJoin(synonym, empty)).toEqual(expectedWithnull);
   })
 
 

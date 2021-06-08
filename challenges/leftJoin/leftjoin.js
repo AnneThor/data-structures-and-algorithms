@@ -19,6 +19,14 @@ const ht = require('../../Data-Structures/hashTable/hashTable.js');
  * i.e. { {key: string, syn: sting, ant: string}, { key: string...}}
  **/
 function leftJoin(left, right) {
-  0
-
+  let keys = left.keys;
+  let lj = keys.map(key => {
+    let valArr = [key];
+    valArr.push(left.get(key));
+    valArr.push(right.contains(key) ? right.get(key) : null)
+    return valArr;
+  })
+  return lj;
 }
+
+module.exports = { leftJoin: leftJoin }

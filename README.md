@@ -32,6 +32,8 @@
 
 ### Code Challenges
 
+**[Left Join with HashTables](./challenges/leftJoin/README.md)**
+
 **[Tree Intersection](./challenges/treeIntersection/README.md)**
 
 **[Repeated Words](./challenges/repeatedWords/README.md)**
