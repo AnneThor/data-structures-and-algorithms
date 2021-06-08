@@ -17,7 +17,8 @@ class HashTable {
    **/
     constructor(size) {
       this.size = size;
-      this.map = new Array(size).fill(new ll())
+      this.map = new Array(size).fill(new ll());
+      this.keys = [];
     }
 
   /**
@@ -50,6 +51,7 @@ class HashTable {
       let unit = { [key]: value }
       let hash = this.hash(key);
       this.map[hash].append(unit);
+      this.keys.push(key);
     }
 
   /**
