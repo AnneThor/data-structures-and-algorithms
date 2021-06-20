@@ -7,7 +7,7 @@ Extend the graph class to include a breadth first traversal method.
 Whiteboard picture below has summary of algorithm.
 
 Time: O(n) - time to visit every vertex in the graph, O(1) lookup from internal map
-Space: O(n) - creating an array of nodes for the return 
+Space: O(n) - creating an array of nodes for the return
 
 ## API
 [Edge - JSDocs](https://annethor.github.io/data-structures-and-algorithms/out/edge.js.html)
@@ -18,4 +18,4 @@ Space: O(n) - creating an array of nodes for the return
 
 ## Whiteboard
 
-![Whiteboard]('./bfGraph.png')
+![Whiteboard]('/bfGraph.png')
