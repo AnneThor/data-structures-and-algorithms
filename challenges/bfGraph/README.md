@@ -18,4 +18,4 @@ Space: O(n) - creating an array of nodes for the return
 
 ## Whiteboard
 
-![Whiteboard]('/bfGraph.png')
+![Whiteboard](/bfGraph.png)
