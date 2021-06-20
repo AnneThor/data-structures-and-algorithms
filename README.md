@@ -34,6 +34,8 @@
 
 ### Code Challenges
 
+**[Breadth First Graph](./challenges/bfGraph/README.md)**
+
 **[Left Join with HashTables](./challenges/leftJoin/README.md)**
 
 **[Tree Intersection](./challenges/treeIntersection/README.md)**

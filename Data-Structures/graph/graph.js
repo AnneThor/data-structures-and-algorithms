@@ -1,6 +1,7 @@
 'use strict'
 const Vertex = require('./vertex.js')
 const Edge = require('./edge.js')
+const Queue = require('../stacks-and-queues/queue.js')
 
 class Graph {
 
@@ -59,7 +60,7 @@ class Graph {
      * edges. This will be in the form of linked
      * list of nodes containin key-value pairs of { vertex: weight }
      * @param {object} vertex - value of vertex to return neighbors of
-     * @return {object} - linked list of neighboring nodes
+     * @return {object} - array of neighboring nodes
      **/
      getNeighbors(vertex) {
        let neighbors = this.list.get(vertex)
@@ -77,6 +78,35 @@ class Graph {
       size() {
         return Array.from(this.list.keys()).length
       }
+
+      /**
+       * Breadth first traversal from given input vertex that returns
+       * an array containing the vertices of the graph
+       * @param {object} vertex - the vertex to use as the starting point
+       * of the traversal
+       * @return {object} - an array of vertices in the tree or null if
+       * the original input was not a vertex in the graph
+       **/
+       breadthFirst(vertex) {
+         if (!this.list.get(vertex)) { return null }
+         let q = new Queue()
+         let visited = []
+         q.enqueue(vertex);
+         while(!q.isEmpty()) {
+           let curr = q.dequeue()
+           if (!visited.includes(curr)) {
+             visited.push(curr);
+             console.log("curr array", visited)
+             let neighbors = this.getNeighbors(curr);
+             console.log("neighbors are", neighbors)
+             neighbors.forEach(neighbor => {
+               q.enqueue(neighbor.vertex)
+             })
+           }
+         }
+         return visited
+       }
+
 
 }
 
