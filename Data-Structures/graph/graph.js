@@ -20,8 +20,9 @@ class Graph {
    * found in the graph
    */
    contains(vertex) {
-    if (!this.list.get(vertex)) { return false }
-    else { return true }
+     let value = vertex.value;
+     let keys = Array.from(this.list.keys()).map(object => object.value)
+     return keys.includes(value);
    }
 
 
@@ -83,6 +84,25 @@ class Graph {
        }
      }
 
+      /**
+      * GetNeighborsValue accepts a value as input, returns a collection
+      * of edges attached to the vertex fi that corresponds to a vertex
+      * contained in the map, including the weight of the
+      * edges. This will be in the form of an array of lists [vertex, weight]
+      * @param {object} value - value of vertex to return neighbors of
+      * @return {object} - array of neighboring nodes
+      **/
+      getNeighborsValue(value) {
+        let key = Array.from(this.list.keys()).filter(object => object.value === value)
+        let neighbors = this.list.get(key[0])
+        if (neighbors) {
+          return neighbors;
+        } else {
+          return "Input vertex is not contained in the graph"
+        }
+      }
+
+
      /**
       * Size returns the number of vertices in the graph
       * @return {number} - the number of nodes in the graph
@@ -108,9 +128,7 @@ class Graph {
            let curr = q.dequeue()
            if (!visited.includes(curr)) {
              visited.push(curr);
-             console.log("curr array", visited)
              let neighbors = this.getNeighbors(curr);
-             console.log("neighbors are", neighbors)
              neighbors.forEach(neighbor => {
                q.enqueue(neighbor.vertex)
              })

@@ -275,7 +275,7 @@ are equal only one edge is added
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line32">line 32</a>
+        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line46">line 46</a>
     </li></ul></dd>
     
 
@@ -434,7 +434,7 @@ are equal only one edge is added
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line20">line 20</a>
+        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line34">line 34</a>
     </li></ul></dd>
     
 
@@ -595,7 +595,7 @@ of the traversal</td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line90">line 90</a>
+        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line122">line 122</a>
     </li></ul></dd>
     
 
@@ -654,6 +654,167 @@ the original input was not a vertex in the graph
     
 
     
+    <h4 class="name" id="contains"><span class="type-signature"></span>contains<span class="signature">(vertex)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    returns a boolean representing if the vertex is
+contained in the graph
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>vertex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the vertex searched for</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - representing if the vertex was
+found in the graph
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
     <h4 class="name" id="getNeighbors"><span class="type-signature"></span>getNeighbors<span class="signature">(vertex)</span><span class="type-signature"> &rarr; {object}</span></h4>
     
 
@@ -664,8 +825,7 @@ the original input was not a vertex in the graph
 <div class="description">
     GetNeighbors accepts a node as input, returns a collection
 of edges attached to the vertex, including the weight of the
-edges. This will be in the form of linked
-list of nodes containin key-value pairs of { vertex: weight }
+edges. This will be in the form of an array of lists [vertex, weight]
 </div>
 
 
@@ -758,7 +918,169 @@ list of nodes containin key-value pairs of { vertex: weight }
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line65">line 65</a>
+        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line78">line 78</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - array of neighboring nodes
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getNeighborsValue"><span class="type-signature"></span>getNeighborsValue<span class="signature">(value)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    GetNeighborsValue accepts a value as input, returns a collection
+of edges attached to the vertex fi that corresponds to a vertex
+contained in the map, including the weight of the
+edges. This will be in the form of an array of lists [vertex, weight]
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">value of vertex to return neighbors of</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line95">line 95</a>
     </li></ul></dd>
     
 
@@ -871,7 +1193,7 @@ The second value of each inner array is the edges attached to the node
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line53">line 53</a>
+        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line67">line 67</a>
     </li></ul></dd>
     
 
@@ -981,7 +1303,7 @@ The second value of each inner array is the edges attached to the node
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line78">line 78</a>
+        <a href="graph.js.html">graph.js</a>, <a href="graph.js.html#line110">line 110</a>
     </li></ul></dd>
     
 
@@ -1055,7 +1377,7 @@ The second value of each inner array is the edges attached to the node
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun Jun 20 2021 13:23:44 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Mon Jun 21 2021 20:30:41 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

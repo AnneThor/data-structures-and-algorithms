@@ -20,12 +20,18 @@ const Vertex = require('../../Data-Structures/graph/vertex.js')
  * or null if there is no direct connection
  **/
  function getEdge(graph, cities) {
-   let a, b = [cities]
+   let [a, b] = cities
+   let cityA = new Vertex(a)
+   let cityB = new Vertex(b)
    if (cities.length !== 2) { return null }
-   if (!graph.contains(a) || !graph.contains(b)) {
-     return null
+   if (graph.contains(cityA) && graph.contains(cityB)) {
+     let neighbors = graph.getNeighborsValue(a)
+     let connection = neighbors.filter(edge => edge.vertex.value === b)
+     if (connection.length === 0) { return null }
+     return connection[0].weight;
+   } else {
+     return null;
    }
-   // ok now we now we have 2 cities and they're both in the
-   // Graph
-   if (!graph.getNeighbors(new Vertex(a)))
  }
+
+module.exports = getEdge
