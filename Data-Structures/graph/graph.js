@@ -13,6 +13,19 @@ class Graph {
   }
 
   /**
+   * returns a boolean representing if the vertex is
+   * contained in the graph
+   * @param {object} vertex - the vertex searched for
+   * @return {boolean} - representing if the vertex was
+   * found in the graph
+   */
+   contains(vertex) {
+    if (!this.list.get(vertex)) { return false }
+    else { return true }
+   }
+
+
+  /**
   * AddNodes adds the given vertex to the graph
   * @param {object} vertex - the vertex to add to the graph
   * @return {object} - a node that contains the value
@@ -57,8 +70,7 @@ class Graph {
     /**
      * GetNeighbors accepts a node as input, returns a collection
      * of edges attached to the vertex, including the weight of the
-     * edges. This will be in the form of linked
-     * list of nodes containin key-value pairs of { vertex: weight }
+     * edges. This will be in the form of an array of lists [vertex, weight]
      * @param {object} vertex - value of vertex to return neighbors of
      * @return {object} - array of neighboring nodes
      **/
