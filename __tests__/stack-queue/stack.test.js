@@ -57,16 +57,12 @@ describe("STACK data structure functionality", () => {
     expect(testStack.pop()).toEqual(2);
     expect(testStack.pop()).toEqual(1);
     expect(testStack.pop()).toEqual(0);
-    expect(() => {
-      testStack.pop()
-    }).toThrow();
+    expect(testStack.peek()).toBeNull()
     expect(testStack.top).toBe(null);
   })
 
   test('that we can successfully peek the top item of a stack', () => {
-    expect(() => {
-      emptyStack.peek()
-    }).toThrow();
+    expect(emptyStack.peek()).toBeNull()
     expect(testStack.peek()).toEqual(2);
     testStack.pop();
     expect(testStack.peek()).toEqual(1);
@@ -75,15 +71,6 @@ describe("STACK data structure functionality", () => {
   test('that we can successfully instantiate an empty stack', () => {
     expect(emptyStack).toBeTruthy();
     expect(emptyStack.top).toBe(null);
-  })
-
-  test('that calling peek or pop on an emty stack throws and exception', () => {
-    expect(() => {
-      emptyStack.peek()
-    }).toThrow();
-    expect(() => {
-      emptyStack.peek()
-    }).toThrow();
   })
 
 });
