@@ -42,7 +42,7 @@ class Stack {
     * Returns the value held in the top node or throws an error for an empty stack
     */
     peek() {
-      if (!this.top) { throw new Error({ message: 'Stack is empty!' }) };
+      if (!this.top) { return null };
       return this.top.value;
     }
 

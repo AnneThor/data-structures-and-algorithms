@@ -2,6 +2,7 @@
 const Vertex = require('./vertex.js')
 const Edge = require('./edge.js')
 const Queue = require('../stacks-and-queues/queue.js')
+const Stack = require('../stacks-and-queues/stack.js')
 
 class Graph {
 
@@ -57,86 +58,125 @@ class Graph {
      }
    }
 
-   /**
-    * GetNodes returns the current list of nodes in the graph
-    * This will be in the form of an array of arrays
-    * The first value of each inner array is the vertex value
-    * The second value of each inner array is the edges attached to the node
-    * @return {object} - array of arrays containing [vertex value, [edges]]
-    **/
-    getNodes() {
-      return Array.from(this.list.keys())
-    }
+  /**
+  * GetNodes returns the current list of nodes in the graph
+  * This will be in the form of an array of arrays
+  * The first value of each inner array is the vertex value
+  * The second value of each inner array is the edges attached to the node
+  * @return {object} - array of arrays containing [vertex value, [edges]]
+  **/
+  getNodes() {
+    return Array.from(this.list.keys())
+  }
 
-    /**
-     * GetNeighbors accepts a node as input, returns a collection
-     * of edges attached to the vertex, including the weight of the
-     * edges. This will be in the form of an array of lists [vertex, weight]
-     * @param {object} vertex - value of vertex to return neighbors of
-     * @return {object} - array of neighboring nodes
-     **/
-     getNeighbors(vertex) {
-       let neighbors = this.list.get(vertex)
-       if (neighbors) {
-         return neighbors;
-       } else {
-         return "Input vertex is not contained in the graph"
+  /**
+   * GetNeighbors accepts a node as input, returns a collection
+   * of edges attached to the vertex, including the weight of the
+   * edges. This will be in the form of an array of lists [vertex, weight]
+   * @param {object} vertex - value of vertex to return neighbors of
+   * @return {object} - array of neighboring nodes
+   **/
+   getNeighbors(vertex) {
+     let neighbors = this.list.get(vertex)
+     if (neighbors) {
+       return neighbors;
+     } else {
+       return null
+     }
+   }
+
+  /**
+  * GetNeighborsValue accepts a value as input, returns a collection
+  * of edges attached to the vertex fi that corresponds to a vertex
+  * contained in the map, including the weight of the
+  * edges. This will be in the form of an array of lists [vertex, weight]
+  * @param {object} value - value of vertex to return neighbors of
+  * @return {object} - array of neighboring nodes
+  **/
+  getNeighborsValue(value) {
+    let key = Array.from(this.list.keys()).filter(object => object.value === value)
+    let neighbors = this.list.get(key[0])
+    if (neighbors) {
+      return neighbors;
+    } else {
+      return null
+    }
+  }
+
+
+  /**
+  * Size returns the number of vertices in the graph
+  * @return {number} - the number of nodes in the graph
+  **/
+  size() {
+    return Array.from(this.list.keys()).length
+  }
+
+  /**
+   * Breadth first traversal from given input vertex that returns
+   * an array containing the vertices of the graph
+   * @param {object} vertex - the vertex to use as the starting point
+   * of the traversal
+   * @return {object} - an array of vertices in the tree or null if
+   * the original input was not a vertex in the graph
+   **/
+   breadthFirst(vertex) {
+     if (!this.list.get(vertex)) { return null }
+     let q = new Queue()
+     let visited = []
+     q.enqueue(vertex);
+     while(!q.isEmpty()) {
+       let curr = q.dequeue()
+       if (!visited.includes(curr)) {
+         visited.push(curr);
+         let neighbors = this.getNeighbors(curr);
+         neighbors.forEach(neighbor => {
+           q.enqueue(neighbor.vertex)
+         })
        }
      }
+     return visited
+   }
 
-      /**
-      * GetNeighborsValue accepts a value as input, returns a collection
-      * of edges attached to the vertex fi that corresponds to a vertex
-      * contained in the map, including the weight of the
-      * edges. This will be in the form of an array of lists [vertex, weight]
-      * @param {object} value - value of vertex to return neighbors of
-      * @return {object} - array of neighboring nodes
-      **/
-      getNeighborsValue(value) {
-        let key = Array.from(this.list.keys()).filter(object => object.value === value)
-        let neighbors = this.list.get(key[0])
-        if (neighbors) {
-          return neighbors;
-        } else {
-          return "Input vertex is not contained in the graph"
-        }
+  /**
+  * Depth first traversal from given input vertex that returns
+  * an array containing the vertices of the graph
+  * @param {object} vertex - the vertex to use as the starting point
+  * of the traversal
+  * @return {object} - an array of vertices in the tree or null if
+  * the original input was not a vertex in the graph
+  **/
+  depthFirst(vertex) {
+    if (!vertex || !this.list.get(vertex)) { return null }
+    let visited = []
+    let stack = new Stack()
+    stack.push(vertex)
+    visited.push(vertex)
+    while(!stack.isEmpty()) {
+      let curr = stack.peek()
+      let neighbors = this.getNeighbors(curr)
+      if (neighbors.every(vertex => visited.includes(vertex.vertex))) {
+        stack.pop()
+      } else {
+        neighbors.forEach(vertex => {
+          if (!visited.includes(vertex.vertex)) {
+            visited.push(vertex.vertex)
+            stack.push(vertex.vertex)
+          }
+        })
       }
+    }
+    return visited
+  }
 
 
-     /**
-      * Size returns the number of vertices in the graph
-      * @return {number} - the number of nodes in the graph
-      **/
-      size() {
-        return Array.from(this.list.keys()).length
-      }
-
-      /**
-       * Breadth first traversal from given input vertex that returns
-       * an array containing the vertices of the graph
-       * @param {object} vertex - the vertex to use as the starting point
-       * of the traversal
-       * @return {object} - an array of vertices in the tree or null if
-       * the original input was not a vertex in the graph
-       **/
-       breadthFirst(vertex) {
-         if (!this.list.get(vertex)) { return null }
-         let q = new Queue()
-         let visited = []
-         q.enqueue(vertex);
-         while(!q.isEmpty()) {
-           let curr = q.dequeue()
-           if (!visited.includes(curr)) {
-             visited.push(curr);
-             let neighbors = this.getNeighbors(curr);
-             neighbors.forEach(neighbor => {
-               q.enqueue(neighbor.vertex)
-             })
-           }
-         }
-         return visited
-       }
-
+  // 1. Push the root node into a stack, create an empty array for visited nodes
+  // 2. Start a while loop while the stack is not empty
+  // 3. Peek at the top node in the stack
+  // 4. If the top node has unvisited children, mark the top node as visited
+  // and push the unvisited children back on the stack
+  // 5. If the top node does not have unvisited children pop it off the stack
+  // Repeat until stack is emptied
 
 }
 

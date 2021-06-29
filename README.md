@@ -34,6 +34,8 @@
 
 ### Code Challenges
 
+**[Depth First Graph](./challenges/depthFirstGraph/README.md)**
+
 **[Get Edge Graph](./challenges/getEdge/README.md)**
 
 **[Breadth First Graph](./challenges/bfGraph/README.md)**
